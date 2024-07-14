@@ -6,6 +6,7 @@
             <p>{{ city.name }}, located in {{ city.admin1 }} ({{ city.country }})</p>
             <input name="latitude" value="{{ city.latitude }}" hidden />
             <input name="longitude" value="{{ city.longitude }}" hidden />
+            <input name="city" value="{{ city.name }}" hidden />
             <button type="submit">View weather for this city</button>
         </form>
     {% endfor %}
