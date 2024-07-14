@@ -20,7 +20,7 @@ function updateLocalStorage() {
   }
   let current = JSON.parse(localStorage.getItem("searches"));
   console.log(current, newEntry);
-  if (current && current.length >= 5) {
+  if (current && current.length >= 10) {
     current.pop();
   }
   if (current) {

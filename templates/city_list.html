@@ -10,4 +10,7 @@
             <button type="submit">View weather for this city</button>
         </form>
     {% endfor %}
+    <form action="{% url 'home' %}">
+        <button id="go-home" type="submit">Go back home</button>
+    </form>
 {% endblock %}

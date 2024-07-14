@@ -1,5 +1,5 @@
-html {
-  font-family: "Montserrat", sans;
+:root {
+  font-family: "Montserrat", "Arial";
 }
 
 form {
@@ -11,18 +11,86 @@ label {
   padding-top: 10px;
 }
 
-h1 {
+h1, h2 {
   font-weight: 400;
   font-size: 20px;
+  margin-bottom: 0px;
 }
 
 .city-form {
   margin: 25px 0;
   padding: 5px;
-  border-color: #6053f4;
+  border-color: gray;
   border-width: 1px;
   border-style: solid;
   border-radius: 6px;
+  background: #f4f6f9;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap')
+.city-form p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 95%;
+}
+
+#recent-searches-label {
+  padding-top: 50px;
+}
+
+#recent-searches {
+  font-style: italic;
+  font-weight: 100;
+  font-size: 12px;
+  border-color: #282424;
+  border-width: 1px;
+  border-style: solid;
+  margin-top: 10px;
+  padding-left: 15px;
+}
+
+body {
+  width: 85%;
+  margin: 0 auto;
+}
+
+button {
+  width: auto;
+  min-width: 50%;
+  margin: 8px auto;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  background: #ffb404;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+input {
+  border-radius: 8px;
+  background-color: #FFF;
+  border-width: 1px;
+  border-color: #282424;
+}
+
+#search-by-city-header {
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+#go-home {
+  margin-top: 100px;
+}
+
+@media (min-width: 550px) {
+  body {
+    width: 70%;
+  }
+}
+@media (min-width: 800px) {
+  body {
+    width: 600px;
+  }
+}
