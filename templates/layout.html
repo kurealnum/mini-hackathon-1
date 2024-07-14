@@ -1,0 +1,10 @@
+{% load static %}
+<html>
+    <head>
+        <link href="{% static 'layout.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Weather app</h1>
+        {% block body %}{% endblock %}
+    </body>
+</html>

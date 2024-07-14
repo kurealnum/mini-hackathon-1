@@ -1,16 +1,19 @@
-<h1>Enter latitude and longitude</h1>
-<form method="POST" action="{% url 'results' %}">
-  {% csrf_token %}
-  <label>Latitude</label>
-  <input name="latitude" />
-  <label>Longitude</label>
-  <input name="longitude" />
-  <button type="submit">Submit</button>
-</form>
-<h1>Or...</h1>
-<form method="POST" action="{% url 'city_list' %}">
-  {% csrf_token %}
-  <label>Search for a city</label>
-  <input name="location" />
-  <button type="submit">Submit</button>
-</form>
+{% extends "layout.html" %}
+{% block body %}
+    <h1>Enter latitude and longitude</h1>
+    <form method="POST" action="{% url 'results' %}">
+        {% csrf_token %}
+        <label>Latitude</label>
+        <input name="latitude" />
+        <label>Longitude</label>
+        <input name="longitude" />
+        <button type="submit">Submit</button>
+    </form>
+    <h1>Or...</h1>
+    <form method="POST" action="{% url 'city_list' %}">
+        {% csrf_token %}
+        <label>Search for a city</label>
+        <input name="location" />
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
