@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block body %}
+    <h1>There was an error with your input!</h1>
+    <p>Please make sure that your latitude and longitude coordinates are between -90 and 90.</p>
+    <form action="{% url 'home' %}">
+        <button type="submit">Click to search again</button>
+    </form>
+{% endblock %}

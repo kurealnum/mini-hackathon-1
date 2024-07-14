@@ -20,7 +20,10 @@ def results(request):
         "daily": ["sunrise", "sunset"],
     }
 
-    response = requests.get(OpenMeteoURL, params=params).json()
+    try:
+        response = requests.get(OpenMeteoURL, params=params).json()
+    except:
+        return render(request, "latitudelongitudeerror.html")
 
     data = {
         "name": city,
@@ -40,9 +43,13 @@ def results(request):
 
 def city_list(request):
     location = request.POST.get("location")
-    potential_cities = requests.get(
-        f"https://geocoding-api.open-meteo.com/v1/search?name={location}&count=15&language=en&format=json"
-    ).json()["results"]
+
+    try:
+        potential_cities = requests.get(
+            f"https://geocoding-api.open-meteo.com/v1/search?name={location}&count=15&language=en&format=json"
+        ).json()["results"]
+    except:
+        return render(request, "cityerror.html")
     return render(
         request, "city_list.html", context={"potential_cities": potential_cities}
     )

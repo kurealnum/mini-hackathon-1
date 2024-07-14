@@ -15,6 +15,9 @@ searchCityButton.addEventListener("click", updateLocalStorage);
 
 function updateLocalStorage() {
   const newEntry = document.getElementById("location").value;
+  if (!newEntry) {
+    return;
+  }
   let current = JSON.parse(localStorage.getItem("searches"));
   console.log(current, newEntry);
   if (current && current.length >= 5) {
