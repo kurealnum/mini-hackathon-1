@@ -1,3 +1,28 @@
 html {
-  color: blue;
+  font-family: "Montserrat", sans;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  padding-top: 10px;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.city-form {
+  margin: 25px 0;
+  padding: 5px;
+  border-color: #6053f4;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 6px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap')

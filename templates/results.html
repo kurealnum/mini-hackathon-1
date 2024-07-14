@@ -1,4 +1,7 @@
-<p>
-  At {{data.latitude}}°N {{data.longitude}}°E, the current temperature is
-  {{data.temperature}} Celsius.
-</p>
+{% extends "layout.html" %}
+{% block body %}
+    <p>
+        At {{ data.latitude }}°N {{ data.longitude }}°E, the current temperature is
+        {{ data.temperature }} Celsius.
+    </p>
+{% endblock %}
