@@ -1,1 +1,16 @@
-<h1>Hello World</h1>
+<h1>Enter latitude and longitude</h1>
+<form method="POST" action="{% url 'results' %}">
+  {% csrf_token %}
+  <label>Latitude</label>
+  <input name="latitude" />
+  <label>Longitude</label>
+  <input name="longitude" />
+  <button type="submit">Submit</button>
+</form>
+<h1>Or enter a city, region, or country.</h1>
+<form method="POST" action="{% url 'results' %}">
+  {% csrf_token %}
+  <label>Enter a city, region, or country</label>
+  <input name="location" />
+  <button type="submit">Submit</button>
+</form>
