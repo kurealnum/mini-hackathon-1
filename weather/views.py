@@ -14,16 +14,6 @@ def home(request):
 def results(request):
     latitude = request.POST.get("latitude")
     longitude = request.POST.get("longitude")
-    location = request.POST.get("location")
-
-    # if the user entered a location instead of lat and long
-    if location:
-        response = requests.get(
-            f"https://geocoding-api.open-meteo.com/v1/search?name={location}&count=1&language=en&format=json"
-        )
-        latitude_and_longitude = response.json()["results"][0]
-        latitude = latitude_and_longitude["latitude"]
-        longitude = latitude_and_longitude["longitude"]
 
     params = {
         "latitude": latitude,
@@ -56,3 +46,13 @@ def results(request):
     }
 
     return render(request, "results.html", context={"data": data})
+
+
+def city_list(request):
+    location = request.POST.get("location")
+    potential_cities = requests.get(
+        f"https://geocoding-api.open-meteo.com/v1/search?name={location}&count=15&language=en&format=json"
+    ).json()["results"]
+    return render(
+        request, "city_list.html", context={"potential_cities": potential_cities}
+    )
