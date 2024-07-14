@@ -1,4 +1,5 @@
 {% extends "layout.html" %}
+{% load static %}
 {% block body %}
     <h1>Enter latitude and longitude</h1>
     <form method="POST" action="{% url 'results' %}">
@@ -13,7 +14,10 @@
     <form method="POST" action="{% url 'city_list' %}">
         {% csrf_token %}
         <label>Search for a city</label>
-        <input name="location" />
-        <button type="submit">Submit</button>
+        <input id="location" name="location" />
+        <button id="search-city" type="submit">Submit</button>
     </form>
+    <label>Recent Searches</label>
+    <div id="recent-searches"></div>
+    <script src="{% static 'js/manageRecentSearches.js' %}"></script>
 {% endblock %}
