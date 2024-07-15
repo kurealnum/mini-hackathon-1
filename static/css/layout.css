@@ -123,6 +123,11 @@ p {
   margin-bottom: 20px;
 }
 
+#empty-p {
+  padding: 0px;
+  margin: 5px;
+}
+
 @media (min-width: 550px) {
   body {
     width: 70%;

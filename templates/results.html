@@ -1,7 +1,14 @@
 {% extends "layout.html" %}
 {% load static %}
 {% block body %}
-    <h1 id="weather-header">Weather for {{ data.name }}</h1>
+    <h1 id="weather-header">
+        Weather for
+        {% if not data.name %}
+            {{ data.latitude }}°N {{ data.longitude }}°E
+        {% else %}
+            {{ data.name }}
+        {% endif %}
+    </h1>
     <div class="info-box-wrapper">
         <div class="info-box">
             <img src="{% static 'imgs/celsius.png' %}">
@@ -24,7 +31,11 @@
             <span>Sunset - {{ data.sunset }} GMT+0</span>
         </div>
     </div>
-    <p>Located at {{ data.latitude }}°N {{ data.longitude }}°E</p>
+    {% if data.name %}
+        <p>Located at {{ data.latitude }}°N {{ data.longitude }}°E</p>
+    {% else %}
+        <p id="empty-p"></p>
+    {% endif %}
     <form action="{% url 'home' %}">
         <button type="submit">Go back home</button>
     </form>
