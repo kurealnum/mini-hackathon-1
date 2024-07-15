@@ -8,8 +8,7 @@ Icons Used: https://www.flaticon.com/packs/weather-550?word=weather
 
 # Running the project with Docker
 
-Run `docker build . -t YOURTAGHERE`.
-Then, run `docker run -p8000:8000 YOURTAGHERE`
+Run `docker compose up` in the root of the project.
 
 You should now be able to access the site from `localhost:8000`.
 
