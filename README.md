@@ -2,6 +2,10 @@
 
 Task 1 for a Mini Hackathon that I took part in over the summer of 2024 (specifications: https://minihackathon.de/gdge/)
 
+## Sources
+
+Icons Used: https://www.flaticon.com/packs/weather-550?word=weather
+
 # Running the project with Docker
 
 Run `docker build . -t YOURTAGHERE`.

@@ -51,6 +51,8 @@ h1, h2 {
 body {
   width: 85%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 button {
@@ -82,6 +84,37 @@ input {
 
 #go-home {
   margin-top: 100px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  padding: 20px 0;
+  justify-content: center;
+  left: 0;
+  right: 0;
+}
+
+img {
+  width: 65px;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 17px;
+}
+
+.info-box-wrapper {
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+p {
+  margin: 20px auto;
 }
 
 @media (min-width: 550px) {
