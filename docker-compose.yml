@@ -1,0 +1,8 @@
+services:
+    weatherapp:
+        build:
+            context: ./
+            dockerfile: ./Dockerfile
+        container_name: weatherapp
+        ports:
+            - "8000:8000"

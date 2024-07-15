@@ -15,7 +15,7 @@ You should now be able to access the site from `localhost:8000`.
 
 # Running the project manually
 
-In case Docker isn't working for some reason, here's how to manually set up and run the project.
+Incase Docker isn't working for some reason, here's how to manually set up and run the project.
 
 Ensure that you have Python 3.10 (or a later version) installed.
 
