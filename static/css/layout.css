@@ -117,6 +117,12 @@ p {
   margin: 20px auto;
 }
 
+#weather-header {
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
 @media (min-width: 550px) {
   body {
     width: 70%;

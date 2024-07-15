@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 {% load static %}
 {% block body %}
+    <h1 id="weather-header">Weather for {{ data.name }}</h1>
     <div class="info-box-wrapper">
         <div class="info-box">
             <img src="{% static 'imgs/celsius.png' %}">
